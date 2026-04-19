@@ -1,0 +1,104 @@
+/* executive-mobile.css */
+/* These styles apply automatically on mobile screens (max-width: 768px) */
+
+.container {
+    padding: 0 15px;
+}
+
+.hero {
+    padding: 40px 0 20px;
+}
+
+.hero h1 {
+    font-size: 2rem;
+}
+
+.hero p {
+    font-size: 1rem;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.glass-panel {
+    padding: 25px 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.summary-card h2, .comparison-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.highlight-text {
+    font-size: 1.1rem;
+}
+
+.summary-content p {
+    font-size: 1rem;
+}
+
+.stats-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.stat-item {
+    padding: 20px;
+}
+
+.stat-item i {
+    font-size: 2rem;
+}
+
+.stat-value {
+    font-size: 1.6rem;
+}
+
+/* Enhancing the table for horizontal swiping on mobile */
+.table-responsive {
+    /* Allow scrolling edge-to-edge on mobile */
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: calc(100% + 40px);
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    /* Add a subtle visual hint that it can scroll */
+    background: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)),
+                linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 100% 0,
+                radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.1), transparent),
+                radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.1), transparent) 100% 0;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+    background-attachment: local, local, scroll, scroll;
+}
+
+.competitor-table {
+    min-width: 700px; /* Force table to be wider than screen to enable scroll */
+}
+
+.competitor-table th, 
+.competitor-table td {
+    padding: 15px 12px;
+    font-size: 0.9rem;
+}
+
+.competitor-table th.carewise-col {
+    font-size: 1.1rem;
+}
+
+.row-header {
+    width: 150px;
+    font-size: 0.9rem;
+    white-space: normal;
+}
+
+.highlight-cell {
+    font-size: 1rem;
+}
