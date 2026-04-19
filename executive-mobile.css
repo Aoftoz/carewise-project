@@ -57,50 +57,101 @@
     font-size: 1.6rem;
 }
 
-/* Enhancing the table for horizontal swiping on mobile */
+/* Re-design table to be stacked cards for mobile (No scrollbar) */
 .table-responsive {
-    /* Allow scrolling edge-to-edge on mobile */
-    margin-left: -20px;
-    margin-right: -20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: auto;
-    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    background: none;
     box-shadow: none;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    /* Add a subtle visual hint that it can scroll */
-    background: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)),
-                linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 100% 0,
-                radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.1), transparent),
-                radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.1), transparent) 100% 0;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
-    background-attachment: local, local, scroll, scroll;
 }
 
-.competitor-table {
-    min-width: 800px; /* Wider to prevent text wrapping */
-}
-
-.competitor-table th, 
+.competitor-table, 
+.competitor-table tbody, 
+.competitor-table tr, 
 .competitor-table td {
-    padding: 15px 12px;
-    font-size: 0.9rem;
-    white-space: nowrap;
-}
-
-.competitor-table th.carewise-col {
-    font-size: 1.1rem;
-}
-
-.row-header {
-    width: 150px;
-    font-size: 0.9rem;
+    display: block;
+    width: 100%;
     white-space: normal;
+    padding: 0;
+}
+
+.competitor-table thead {
+    display: none; /* Hide original table header */
+}
+
+.competitor-table tr {
+    margin-bottom: 25px;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.competitor-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    text-align: right;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.95rem;
+}
+
+.competitor-table td:last-child {
+    border-bottom: none;
+}
+
+/* Format the Row Header (Card Title) */
+.competitor-table td.row-header {
+    background: var(--secondary);
+    color: white;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+/* Pseudo-elements for labels */
+.competitor-table td:not(.row-header)::before {
+    font-weight: 600;
+    text-align: left;
+    color: var(--secondary);
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.competitor-table td:nth-of-type(2)::before { 
+    content: "CareWise"; 
+    color: var(--primary); 
+    font-weight: 700;
+}
+.competitor-table td:nth-of-type(3)::before { content: "Brand A"; }
+.competitor-table td:nth-of-type(4)::before { content: "Brand B"; }
+.competitor-table td:nth-of-type(5)::before { content: "Brand C"; }
+
+/* CareWise column highlighting in card mode */
+.competitor-table td.carewise-col {
+    background-color: var(--carewise-bg);
+    border-left: none;
+    border-right: none;
+}
+
+.competitor-table td.best-value {
+    background-color: var(--primary);
+    color: white;
+    border-radius: 0;
+}
+
+.competitor-table td.best-value::before {
+    color: white;
 }
 
 .highlight-cell {
-    font-size: 1rem;
+    font-size: 1.05rem;
+    color: var(--primary);
+    font-weight: 700;
 }
