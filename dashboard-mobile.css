@@ -1,0 +1,65 @@
+/* Mobile styles for dashboard */
+@media (max-width: 900px) {
+    .dashboard-layout {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 15px;
+    }
+
+    .sidebar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    
+    .sidebar-header .logo { margin-bottom: 0; font-size: 1.5rem; }
+
+    .sidebar-nav {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+
+    .nav-item {
+        white-space: nowrap;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .nav-item.active {
+        border-left: none;
+        border-bottom: 3px solid var(--primary);
+        background: rgba(14, 165, 233, 0.1);
+    }
+
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    .top-nav {
+        flex-direction: column-reverse;
+        gap: 15px;
+        align-items: flex-start;
+        margin-bottom: 25px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .dashboard-modules {
+        grid-template-columns: 1fr;
+    }
+
+    .camera-grid {
+        grid-template-columns: 1fr;
+    }
+}

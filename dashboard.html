@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareWise | AI Quality Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css?v=1.0.0">
+    <link rel="stylesheet" href="dashboard-mobile.css?v=1.0.0" media="screen and (max-width: 900px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar glass-dark">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fa-solid fa-heart-pulse glow-primary"></i> Care<span>Wise</span>
+                </div>
+                <div class="badge-ai">AI Guardian Active</div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active"><i class="fa-solid fa-border-all"></i> Overview</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-video"></i> Live Monitor</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-bell"></i> Alerts <span class="badge-alert">3</span></a>
+                <a href="index.html" class="nav-item"><i class="fa-solid fa-arrow-left"></i> Back to Summary</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-nav">
+                <div class="search-bar">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="ค้นหาสาขา หรือ ข้อมูลผู้สูงอายุ...">
+                </div>
+                <div class="user-profile">
+                    <div class="status-indicator online"></div>
+                    <span>Franchise Admin</span>
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=0D8ABC&color=fff" alt="Admin" class="avatar">
+                </div>
+            </header>
+
+            <div class="dashboard-header">
+                <h2>AI Quality Control Center</h2>
+                <p>Real-time monitoring and analytics for all CareWise branches.</p>
+            </div>
+
+            <!-- Stats Overview -->
+            <div class="stats-grid">
+                <div class="stat-card glass-dark">
+                    <div class="stat-icon blue"><i class="fa-solid fa-building"></i></div>
+                    <div class="stat-info">
+                        <h3>Active Branches</h3>
+                        <div class="stat-value">12 <span class="trend up"><i class="fa-solid fa-arrow-up"></i> 2</span></div>
+                    </div>
+                </div>
+                <div class="stat-card glass-dark">
+                    <div class="stat-icon green"><i class="fa-solid fa-users"></i></div>
+                    <div class="stat-info">
+                        <h3>Total Residents</h3>
+                        <div class="stat-value">348 <span class="trend up"><i class="fa-solid fa-arrow-up"></i> 15</span></div>
+                    </div>
+                </div>
+                <div class="stat-card glass-dark">
+                    <div class="stat-icon purple"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="stat-info">
+                        <h3>AI Quality Score</h3>
+                        <div class="stat-value">98.5% <span class="trend steady"><i class="fa-solid fa-minus"></i></span></div>
+                    </div>
+                </div>
+                <div class="stat-card glass-dark alert-card">
+                    <div class="stat-icon red"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <div class="stat-info">
+                        <h3>Active Alerts</h3>
+                        <div class="stat-value text-red">3 <span class="trend down"><i class="fa-solid fa-arrow-down"></i> 1</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Charts & Modules -->
+            <div class="dashboard-modules">
+                <!-- Guardian AI Live Feed Mockup -->
+                <div class="module glass-dark span-2">
+                    <div class="module-header">
+                        <h3><i class="fa-solid fa-satellite-dish blink"></i> Guardian AI Live Monitoring</h3>
+                        <button class="btn-small">View All Cameras</button>
+                    </div>
+                    <div class="camera-grid">
+                        <div class="camera-feed">
+                            <div class="feed-overlay">
+                                <span class="feed-title">Branch A - Common Area</span>
+                                <span class="feed-status normal">Normal</span>
+                            </div>
+                            <div class="ai-box"></div>
+                        </div>
+                        <div class="camera-feed warning-feed">
+                            <div class="feed-overlay">
+                                <span class="feed-title">Branch B - Room 102</span>
+                                <span class="feed-status warning">Fall Risk Detected</span>
+                            </div>
+                            <div class="ai-box alert-box"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Alerts -->
+                <div class="module glass-dark">
+                    <div class="module-header">
+                        <h3><i class="fa-solid fa-clock-rotate-left"></i> System Alerts</h3>
+                    </div>
+                    <ul class="alert-list">
+                        <li class="alert-item critical">
+                            <div class="alert-icon"><i class="fa-solid fa-heart-crack"></i></div>
+                            <div class="alert-content">
+                                <h4>Abnormal Heart Rate</h4>
+                                <p>Resident #1042 (Branch B) - Heart rate spiked to 120bpm.</p>
+                                <span class="time">2 mins ago</span>
+                            </div>
+                        </li>
+                        <li class="alert-item warning">
+                            <div class="alert-icon"><i class="fa-solid fa-person-falling"></i></div>
+                            <div class="alert-content">
+                                <h4>Fall Risk Warning</h4>
+                                <p>Resident #883 (Branch A) - Unusual movement pattern.</p>
+                                <span class="time">15 mins ago</span>
+                            </div>
+                        </li>
+                        <li class="alert-item info">
+                            <div class="alert-icon"><i class="fa-solid fa-pills"></i></div>
+                            <div class="alert-content">
+                                <h4>Medication Reminder</h4>
+                                <p>Branch C - 5 residents pending afternoon medication.</p>
+                                <span class="time">1 hour ago</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
