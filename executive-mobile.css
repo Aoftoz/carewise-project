@@ -64,9 +64,10 @@
     margin-right: -20px;
     padding-left: 20px;
     padding-right: 20px;
-    width: calc(100% + 40px);
+    width: auto;
     border-radius: 0;
     box-shadow: none;
+    overflow-x: auto;
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     /* Add a subtle visual hint that it can scroll */
     background: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)),
@@ -80,13 +81,14 @@
 }
 
 .competitor-table {
-    min-width: 700px; /* Force table to be wider than screen to enable scroll */
+    min-width: 800px; /* Wider to prevent text wrapping */
 }
 
 .competitor-table th, 
 .competitor-table td {
     padding: 15px 12px;
     font-size: 0.9rem;
+    white-space: nowrap;
 }
 
 .competitor-table th.carewise-col {
