@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CareWise | Executive Summary</title>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="executive.css">
+    <link rel="stylesheet" href="executive.css?v=1.0.1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -121,44 +121,6 @@
         </section>
     </main>
 
-    <script>
-        // Advanced animations using Intersection Observer
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        // Apply initial styles and observe elements
-        document.querySelectorAll('.stat-item, .competitor-table tbody tr').forEach((el, index) => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = `all 0.5s ease ${index * 0.1}s`;
-            observer.observe(el);
-        });
-
-        // Safe hover effects for table rows
-        document.querySelectorAll('.competitor-table tbody tr').forEach(row => {
-            row.addEventListener('mouseenter', () => {
-                row.style.backgroundColor = 'var(--carewise-bg)';
-                Array.from(row.children).forEach(cell => {
-                    cell.style.transition = 'all 0.3s ease';
-                });
-            });
-            row.addEventListener('mouseleave', () => {
-                row.style.backgroundColor = 'transparent';
-            });
-        });
-    </script>
+    <script src="executive.js?v=1.0.1"></script>
 </body>
 </html>
